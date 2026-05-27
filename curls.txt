@@ -1,0 +1,14 @@
+﻿curl -X 'GET' \
+  'http://localhost:5118/api/patients?search=an' \
+  -H 'accept: */*'
+
+curl -X 'POST' \
+  'http://localhost:5118/api/patients/90010112345/bedassignments' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "from": "2029-05-27T17:12:34",
+  "to": "2030-05-27T17:12:34",
+  "bedType": "Standard",
+  "ward": "Kardiologia"
+}'
